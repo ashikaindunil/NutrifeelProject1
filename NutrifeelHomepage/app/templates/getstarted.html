@@ -1,0 +1,166 @@
+{% load static %}
+{% load mathfilters %}
+{% load humanize %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css">
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            color: white;
+        }
+
+        img {
+            width: 30%;
+            height: 300px;
+            position: absolute;
+            top: 40%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+        }
+
+        .card {
+            background-color: rgb(248, 249, 250);
+            width: 1500px;
+            height: 450px;
+        }
+
+        .custom-button {
+            font-size: 16px;
+            color: black;
+            position: absolute;
+            top: 85%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(12, 11, 11);
+            color: black;
+            border: 2px solid #f2f4f2;
+            color: rgb(245, 248, 245);
+            padding: 10px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        /* Define your custom classes */
+        .my-custom-class1 {
+            font-size: 3em;
+            font-weight: bold;
+            position: absolute;
+            top: 10%;
+            left: 15%;
+        }
+        
+        .my-custom-class2 {
+            font-size: 3em;
+            font-weight: bold;
+            color: green;
+            position: absolute;
+            top: 23%;
+            left: 15%;
+        }
+
+        .my-custom-class3 {
+            font-size: 1em;
+            color: rgb(0, 0, 0);
+            position: absolute;
+            top: 55%;
+            left: 15%;
+        }
+
+        p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+            position: absolute;
+            top: 75%;
+            left: 15%;
+        }
+
+        h6 {
+            font-size: 1em;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+            position: absolute;
+            top: 66%;
+            left: 15%;
+            font-weight: bold;
+            
+        }
+
+        /* Apply Bootstrap styling to the "Learn more" button */
+        .btn.btn-primary {
+            font-size: 16px;
+            color: rgb(42, 40, 40);
+            background-color: rgb(232, 226, 226);
+            border: 2px solid #f2f4f2;
+            padding: 10px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            
+
+        }
+    </style>
+    <title>Main Page</title>
+</head>
+<body>
+    <!-- Navigation code ... -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(19, 135, 81);">
+        <a class="navbar-brand" href="#">NutriFeel</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="forumlist">Forums</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="recipe">Recipe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="support">Support</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="card">
+        <p class="my-custom-class1">Get Started for </p>
+        <p class="my-custom-class2">a Healthy <br>Lifestyle</p>
+        <p class="my-custom-class3">Do you still feel?<br>Start exploring and personalize your meal plan for a healthy balanced diet</p>
+        <button class="custom-button">Let's Get Started</button>
+        <img src="{% static 'images/Get start page image.PNG' %}" alt="foodmainpage.PNG">
+    </div>
+
+    <h6>About NutriFeel</h6>
+    <p>In a world grappling with food insecurity, NutriFeel is here to make a difference. Our innovative system tackles the pressing issues of limited food access and nutrition deficiencies head-on. We've got you covered!
+    Join us to explore a plethora of alternative food options, engage in insightful discussions, and exchange valuable information.
+    At NutriFeel, we believe that everyone deserves a nutritious meal.</p>
+    <button class="btn btn-primary">Learn more</button>
+</body>
+</html>

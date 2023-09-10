@@ -1,0 +1,147 @@
+{% load static %}
+{% load mathfilters %}
+{% load humanize %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css" />
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            color: white;
+        }
+        .centered {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+}
+        div.polaroid {
+            width: 80%;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+       
+
+        img {
+            width: 125%;
+            height: 500px;
+        }
+        h6 {
+            font-weight: bold;
+            position: absolute;
+            top: 80%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+
+        }
+        .visit-text {
+            font-size: 16px;
+            color:black;
+            position: absolute;
+            top: 85%;
+            left: 14%;
+            transform: translate(-50%, -50%);
+
+        
+}
+         .custom-button{
+            font-size: 16px;
+            color:black;
+            position: absolute;
+            top: 85%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            background-color: white; 
+            color: black; 
+            border: 2px solid #4CAF50;
+            color: green;
+            padding: 10px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .custom-button a {
+            color: green;
+            text-decoration: none;
+        }
+   
+
+
+
+
+
+        /* div.container {
+            text-align: center;
+            padding: 10px 20px;
+        } */
+    </style>
+    <title>Main Page</title>
+</head>
+<body>
+    <!-- ... navigation code ... -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(19, 135, 81);">
+        <a class="navbar-brand" href="#"> 
+            NutriFeel
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto"> <!-- Use ml-auto class here -->
+                <li class="nav-item active">
+                    <a class="nav-link" href="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="forumlist">Forums</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="recipe">Recipe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="support">Support</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="polaroid">
+        <img src="{% static 'images/foodmainpage.PNG' %}" alt="foodmainpage.PNG">
+        <!-- <div class="container">
+            <p>Track your Nutritional Values</p>
+            <button><a class="link" href="ItemList">ItemList</a></button>
+        </div> -->
+    </div>
+
+    <div class="centered">
+    <h1><b>{{ message }}</b></h1>
+    </div>
+
+    <h6><b>Track your Nutritional Values</b></h6>
+     
+    <p class="visit-text">Visit</p>
+    <button class="custom-button">
+        <a class="link" href="mainpage/itemlist.html">ItemList</a>
+    </button>
+    
+</body>
+</html>
